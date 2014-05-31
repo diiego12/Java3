@@ -5,9 +5,17 @@
         <servlet-name>Horizon</servlet-name>
         <servlet-class>diego.cuenta.controladores.ServletCrearCuenta</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletRegistro</servlet-name>
+        <servlet-class>diego.cuenta.controladores.ServletRegistro</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Horizon</servlet-name>
         <url-pattern>/diego.barcena</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletRegistro</servlet-name>
+        <url-pattern>/registro</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
