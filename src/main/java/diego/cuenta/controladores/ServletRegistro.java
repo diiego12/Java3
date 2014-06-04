@@ -18,6 +18,7 @@ public class ServletRegistro extends HttpServlet {
         protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         Mascota mascota = new Gato();     
+        mascota.obtenerRegistro();
         Persona nm = new Persona();
         nm.setMascota(mascota);
         request.setAttribute("registro", nm);

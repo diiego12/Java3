@@ -13,6 +13,6 @@ public class Gato implements Mascota {
     
     @Override
     public String obtenerRegistro(){
-        return "El gatito que registraste es: " +nombre;
+        return "El gatito que registraste es:";
     }
 }
