@@ -1,6 +1,7 @@
 package diego.proyecto1;
 
-public class Mascota {
+public interface Mascota {
 
-    
+    public String obtenerRegistro();      
+        
 }

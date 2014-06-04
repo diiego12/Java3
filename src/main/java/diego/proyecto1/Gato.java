@@ -1,6 +1,6 @@
 package diego.proyecto1;
 
-public class Gato {
+public class Gato implements Mascota {
     private String nombre;
 
     public String getNombre() {
@@ -11,6 +11,7 @@ public class Gato {
         this.nombre = nombre;
     }
     
+    @Override
     public String obtenerRegistro(){
         return "El gatito que registraste es: " +nombre;
     }

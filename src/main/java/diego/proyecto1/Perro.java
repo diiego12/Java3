@@ -1,6 +1,6 @@
 package diego.proyecto1;
 
-public class Perro {
+public class Perro implements Mascota {
     private String nombre;
 
     public String getNombre() {
@@ -10,6 +10,7 @@ public class Perro {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    @Override
     public String obtenerRegistro(){
         return "El perro que registraste es: " +nombre;
     }
