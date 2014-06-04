@@ -1,5 +1,7 @@
 package diego.cuenta.controladores;
 
+import diego.proyecto1.Gato;
+import diego.proyecto1.Mascota;
 import diego.proyecto1.Perro;
 import diego.proyecto1.Persona;
 import java.io.IOException;
@@ -15,10 +17,9 @@ public class ServletRegistro extends HttpServlet {
 
         protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Perro p = new Perro();
-        p.setNombre("Snoopy");
+        Mascota mascota = new Gato();     
         Persona nm = new Persona();
-        nm.setPerro(p);
+        nm.setMascota(mascota);
         request.setAttribute("registro", nm);
         RequestDispatcher despachador = request.getRequestDispatcher("/registro.jsp");
         despachador.forward(request, response);
