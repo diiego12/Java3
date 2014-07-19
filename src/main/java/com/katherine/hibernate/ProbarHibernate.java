@@ -30,10 +30,10 @@ public class ProbarHibernate {
         //sesion.update(new Usuario3(1,"clarkenet","1234"));
         
         //Consulta de todos (SELECT *) a traves de Criteria
-        Criteria crit = sesion.createCriteria(Usuario.class);
-        ArrayList<Usuario> us = (ArrayList<Usuario>) crit.list();
+        Criteria crit = sesion.createCriteria(Usuario1.class);
+        ArrayList<Usuario1> us = (ArrayList<Usuario1>) crit.list();
         
-        for(Usuario u : us){
+        for(Usuario1 u : us){
             System.out.println(u);
         }
         
