@@ -7,7 +7,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Query;
 
 public class DAONominaImpl extends DAO{
-    public void agregarUsuario(Usuario cliente) {
+    public void agregarNomina(Nomina cliente) {
     begin();
     getSession().save(cliente);
     commit();
@@ -19,14 +19,14 @@ public class DAONominaImpl extends DAO{
         * Este metodo obtiene todos los registros de la tabla cliente 
         * @return Este metodo nos regresa todos los clientes
         */
-    public ArrayList<Usuario> buscarTodosUsuarios() {
+    public ArrayList<Nomina> buscarTodasNominas() {
         begin();
-      Criteria c=getSession().createCriteria(Usuario.class);
-      ArrayList<Usuario> clientes = (ArrayList<Usuario>)c.list();
+      Criteria c=getSession().createCriteria(Nomina.class);
+      ArrayList<Nomina> nm = (ArrayList<Nomina>)c.list();
         commit();
         close();
          
-return clientes; 
+return nm; 
         
       
     }
@@ -34,7 +34,7 @@ return clientes;
      * Este metodo borra un cliente
      * @param p Se le debe pasar un parametro de tipo cliente para ser borrado
      */
- public void borrarUsuario(Usuario p){
+ public void borrarNomina(Usuario p){
             begin();
             getSession().delete(p);
             commit();
@@ -45,9 +45,9 @@ return clientes;
          * @param id Este parametro es el Id del cliente que se quiere buscar
          * @return El tipo de retorno es el cliente buscado
          */
-  public Usuario buscarPorId(int id){
+  public Usuario buscarNominaPorId(int id){
       begin();
-     Query q = getSession().createQuery("from Usuario where id = :id");
+     Query q = getSession().createQuery("from Nomina where id = :id");
         q.setInteger("id",id);
         Usuario p = (Usuario)q.uniqueResult();
         commit();
